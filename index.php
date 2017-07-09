@@ -25,6 +25,31 @@ include "/Functions/header.php";
     echo "Hello World"
    ?>
         </nav>
+        
+           <div>
+            <table>
+                <thead>
+                   Movie type
+                </thead>
+                <thead>
+                   Director 
+                </thead>
+                <thead>
+                   Actor 
+                </thead>
+                <thead>
+                   Rating
+                </thead>
+                <thead>
+                   Genre
+                </thead>
+                <thead>
+                   Price
+                </thead>
+            </table>
+                
+            
+        </div>
 
         
         
