@@ -4,6 +4,12 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
+<?php
+
+    include "conn.php";
+    include "query.php";
+
+?>
 <html>
     <head>
         <meta charset="UTF-8">
@@ -20,6 +26,24 @@ and open the template in the editor.
         <h6>
             Search Here or Choose a category below
         </h6>
+        
+        <table>
+            
+        <?php
+            
+            $get = query("Select distinct Genre from dvd");
+            $show = mysqli_fetch_assoc($get);
+            
+            foreach($get as $get){
+                
+                echo "<tr> <td>" . $show['Genre'] . "</td></tr>";
+            }
+        
+        
+        ?>
+            
+        </table>
+            
         <div class='form'> </div>
         <ul class='tab-group'>
             <li class='tab active'><a href='#signup'>Sign up</a> </li>
