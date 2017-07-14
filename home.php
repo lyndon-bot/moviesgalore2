@@ -1,28 +1,7 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <?php
 
-include "conn.php";
-include "query.php";
-
+    include "header.php";
 ?>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Movies Galore</title>
-        <link rel="stylesheet" type="css" href="css/main.css">
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-        
-    </head>
-    <body>
-        <?php
-        // put your code here
-
-        ?>
         <h1>
             Movies Galore 
         </h1>
