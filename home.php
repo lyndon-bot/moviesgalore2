@@ -32,9 +32,9 @@ and open the template in the editor.
         <?php
             
             $get = query("Select distinct Genre from dvd");
-            $show = mysqli_fetch_assoc($get);
+            $show = mysqli_fetch_all($get,MYSQLI_ASSOC);
             
-            foreach($get as $get){
+            foreach($show as $show){
                 
                 echo "<tr> <td>" . $show['Genre'] . "</td></tr>";
             }
