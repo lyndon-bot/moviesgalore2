@@ -14,6 +14,7 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <title>Movies Galore</title>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     </head>
     <body>
         <?php
@@ -27,23 +28,52 @@ and open the template in the editor.
             Search Here or Choose a category below
         </h6>
         
+        
         <table>
             
         <?php
             
-            $get = query("Select distinct Genre from dvd");
+         $col = query("show columns from dvd");
+         $show_col = mysqli_fetch_all($col, MYSQLI_ASSOC);
+         
+         foreach($show_col as $show_col){
+                
+                echo "<form  method='post' action='select.php'><button class='btn btn-primary' name='category' value='" . $show_col['Field'] . "'>" . $show_col['Field'] . "</button></form>";
+         }
+         
+        
+        
+        /*   $get = query("Select distinct Genre from dvd");
             $show = mysqli_fetch_all($get,MYSQLI_ASSOC);
             
             foreach($show as $show){
                 
                 echo "<tr> <td>" . $show['Genre'] . "</td></tr>";
             }
+        */
         
-        
-        ?>
+ 
+        ?>      
             
         </table>
+          
+       <table class="table table-striped ">
             
+        <?php
+            
+            $get_m = query("Select * from dvd limit 16");
+            $show_m = mysqli_fetch_all($get_m, MYSQLI_ASSOC);
+            
+            foreach($show_m as $show_m){
+                
+                echo "<tr> <td>" . $show_m['DVDTitle'] . "</td></tr>";
+            }
+        
+        
+        ?>      
+            
+        </table>
+        
         <div class='form'> </div>
         <ul class='tab-group'>
             <li class='tab active'><a href='#signup'>Sign up</a> </li>
