@@ -3,7 +3,7 @@
 		include 'query.php';
 		$match = query("SELECT COUNT(*) FROM ____ WHERE user=$user and password=$pass");
 		if($match == 1){
-			session_start()
+			session_start();
 			$_SESSION['user'] = $user;
 			$_SESSION['pass'] = $pass;
 			header("location: index.php");
