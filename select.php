@@ -1,3 +1,6 @@
+
+<table>
+
 <?php
 
 include "header.php";
