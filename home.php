@@ -2,57 +2,49 @@
 
     include "header.php";
 ?>
+
         <h1>
             Movies Galore 
         </h1>
-        <h6>
-            Search Here or Choose a category below
-        </h6>
 
         
-        <table>
+<div class="panel panel-default">
+    <div class="panel-heading">
+       
+        <h2 class="panel-title" style="text-align: center;">Choose a category below </h2> 
+    </div>
+    <div class="pannel-body">
+     
+        <div style=" display:flex; justify-content: center;">
+            
+            <form action="MovieSelect.php" method="post">
+                <button class="form-control btn btn-info" style="" name="CType" value="Genre">  Movie Type</button>
+            </form>
+            
+            <form action="MovieSelect.php" method="post">
+                <button class="form-control btn btn-info" style="" name="CType" value="Director"> Director </button>
+            </form>
+            
+            <form action="MovieSelect.php" method="post">
+                <button class="form-control btn btn-info" style="" name="CType" value="Actor"> Actor </button>
+            </form>
+            
+            <form action="MovieSelect.php" method="post">
+                <button class="form-control btn btn-info" style="" name="CType" value="Rating"> Rating </button>
+            </form>
+            
+            <form action="MovieSelect.php" method="post">
+                <button class="form-control btn btn-info" style="" name="CType" value="Price"> Price </button>
+            </form>
+            
+        </div>
+        
+    </div>
+    
+    
+</div>
 
-<?php
-
-$get = query("Show columns from dvd");
-$show_col = mysqli_fetch_all($get, MYSQLI_ASSOC);
-
-         foreach($show_col as $show_col){
-                
-                echo "<form  method='post' action='select.php'><button class='btn btn-primary' name='category' value='" . $show_col['Field'] . "'>" . $show_col['Field'] . "</button></form>";
-         }
-         
-        
-        
-        /*   $get = query("Select distinct Genre from dvd");
-            $show = mysqli_fetch_all($get,MYSQLI_ASSOC);
-            
-            foreach($show as $show){
-                
-    echo "<tr> <td>" . $show['Genre'] . "</td></tr>";
-}*/
-?>
-
-        </table>
-          
-       <table class="table table-striped ">
-            
-        <?php
-            
-            $get_m = query("Select * from dvd limit 16");
-            $show_m = mysqli_fetch_all($get_m, MYSQLI_ASSOC);
-            
-            foreach($show_m as $show_m){
-                
-                echo "<tr> <td>" . $show_m['DVDTitle'] . "</td></tr>";
-            }
-        
-        
-        ?>      
-            
-        </table>
-        
-        <div class='form'> </div>
+        <!-- <div class='form'> </div>
         <ul class='tab-group'>
             <li class='tab active'><a href='#signup'>Sign up</a> </li>
             <li class='tab'> <a href='#login'>log In</a> </li>
@@ -123,7 +115,7 @@ $show_col = mysqli_fetch_all($get, MYSQLI_ASSOC);
 
                     <button class="button button-block"/>Log In</button>
 
-                </form>
+                </form>-->
 
             </div>
 

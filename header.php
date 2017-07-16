@@ -10,6 +10,7 @@ and open the template in the editor.
         <title>Movies Galore</title>
         <link rel="stylesheet" type="css" href="main.css">
         <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     </head>
     <body>
         	<nav class="navbar navbar-inverse navbar-fixed-top">
@@ -20,7 +21,7 @@ and open the template in the editor.
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#">Movies Galore</a>
+					<a class="navbar-brand" href="home.php">Movies Galore</a>
 				</div>
 				<div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav">
