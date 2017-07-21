@@ -32,7 +32,7 @@ and open the template in the editor.
        <table class="table table-reponsive table-stripped" style="margin-top: 50px;">
         <?php
             
-            $get_temp = query("Select * from tempcart A inner join dvd B on A.tc_dvdid = B.DVDID ");
+            $get_temp = query("Select * from tempcart A inner join dvd B on A.tc_dvdid = B.DVDID where A.tc_custid = '$custid'");
             $show_temp = mysqli_fetch_all($get_temp, MYSQLI_ASSOC);
             $total = 0;
             

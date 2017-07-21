@@ -16,9 +16,9 @@ and open the template in the editor.
         <table class="table table-reponsive table-stripped" style="margin-top: 50px;">
         <?php
             
-            $get_temp = query("Select * from orderentry A inner join user B on A.customerid = B.customer_id where A.customerid = '1'");
+            $get_temp = query("Select * from orderentry A inner join user B on A.customerid = B.customer_id where A.customerid = '$custid'");
             $show_temp = mysqli_fetch_all($get_temp, MYSQLI_ASSOC);
-            
+          
             foreach($show_temp as $show_temp){
                 
                echo "<tr><td>" . $show_temp['order_date'] . "</td><td>" . $show_temp['deliverydate'] . "</td><td>" . $show_temp['Shipmethod'] . "</td><td>" . $show_temp['userid'] . "</td><td>" . $show_temp['paymethod'] . "</td><td>" . $show_temp['total_order'] . "</td></tr>";

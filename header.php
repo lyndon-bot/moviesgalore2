@@ -1,3 +1,18 @@
+<?php
+
+session_start();
+
+if(!isset($_SESSION['custid'])){
+    
+  header('location:login.php'); 
+    
+}
+
+$custid = $_SESSION['custid'];
+$userid = $_SESSION['username'];
+
+?>
+
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
