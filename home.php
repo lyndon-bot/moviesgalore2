@@ -17,7 +17,7 @@
      
         <div style=" display:flex; justify-content: center;">
             
-            <form action="MovieSelect.php" method="post">
+            <form action="MovieSelect.php?id=1" method="post">
                 <button class="form-control btn btn-info" style="" name="CType" value="Genre">  Movie Type</button>
             </form>
             
